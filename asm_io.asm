@@ -81,7 +81,7 @@ valid_st_format     db  "ST%d: %.10g", NL, 0
 invalid_st_format   db  "ST%d: Invalid ST", NL, 0
 empty_st_format     db  "ST%d: Empty", NL, 0
 
-;
+;;;
 ; code is put in the _TEXT segment
 ;
 %ifdef OBJ_TYPE
