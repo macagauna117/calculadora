@@ -13,7 +13,7 @@ calc_sum:
         pusha
 
         mov    eax , string1
-        call    print_string
+        call    print_string        ;imrpimo mensaje en pantalla
         mov     eax , [ebp + 8]     ; muevo a eax el primer parametro
         add     eax , [ebp + 12]    ; sumo el parámetro 2 al 1
 

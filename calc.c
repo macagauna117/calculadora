@@ -4,6 +4,8 @@
 void calc_sum(int , int);
 void calc_res(int , int);
 
+//Verifico que tipo de operacion debo realizar
+
 int main( int argc, char *argv[] )  {
   int num1=atoi(argv[1]);
   int num2=atoi(argv[3]);
