@@ -8,7 +8,6 @@ int calc_sumb(int, int);
 int calc_resb(int, int);
 int decabin(int);
 
-//Verifico que tipo de operacion debo realizar
 
 int main( int argc, char *argv[] )  {
 
@@ -20,14 +19,22 @@ int main( int argc, char *argv[] )  {
   int aux2=0;
   int resul=0;
 
+  if(argc==1){ //si solo escribo el ./calc , espero la entrada del usuario, sino, tomo los parametros de la misma linea
+    printf("Ingrese si la operacion será binaria (b) o decimal (d): ");
+    scanf("%c", &op);
 
+    printf("Ingrese la operacion con numeros enteros y entre espacios (ej 4 + 5): ");
+    scanf("%i %c %i", &num1,&sign , &num2) ;
 
-  printf("Ingrese si la operacion será binaria (b) o decimal (d): ");
-  scanf("%c", &op);
+  }
+  else{
+    op=(char)argv[1][0];
+    sign=(char)argv[3][0];
+    num1=atoi(argv[2]);
+    num2=atoi(argv[4]);
+  }
 
-  printf("Ingrese la operacion con numeros enteros y entre espacios (ej 4 + 5): ");
-  scanf("%i %c %i", &num1,&sign , &num2) ;
-
+//AHORA VERIFICO LA OPERACION QUE DEBO REALIZAR
 
   if(sign=='+' && op=='d'){
     calc_sum(num1,num2);
@@ -50,7 +57,7 @@ int main( int argc, char *argv[] )  {
     printf("\n");
   }
 
-else if(sign=='-' && op=='b'){
+  else if(sign=='-' && op=='b'){
     resul=calc_resb(num1,num2);
     printf("%s", "El resultado de restar ");
     decabin(num1);
