@@ -11,10 +11,9 @@ assert_equals () {
   fi
 }
 
-test1="Se realizara una suma decimal (4 + 5) = 9"
-response1=$(./calc d 4 + 5)
-assert_equals "$response1" "$test1"
 
+response=$(./calc d 2 + 2)
+assert_equals "$response" 4
 
 
 
