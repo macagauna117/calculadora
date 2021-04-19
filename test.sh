@@ -13,7 +13,7 @@ assert_equals () {
 
 
 response=$(./calc d 2 + 2)
-assert_equals "$response" El resultado de la suma decimal es: 4
+assert_equals "$response" "El resultado de la suma decimal es: 4"
 
 
 
